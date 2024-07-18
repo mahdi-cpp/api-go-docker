@@ -9,13 +9,13 @@ func AddDockerRoutes(rg *gin.RouterGroup) {
 
 	users := rg.Group("/docker")
 
-	users.GET("/GetDockerImages", func(context *gin.Context) {
+	users.GET("/images", func(context *gin.Context) {
 		context.JSON(200, repository.GetDockerImages())
 	})
-	users.GET("/GetDockerContainers", func(context *gin.Context) {
+	users.GET("/containers", func(context *gin.Context) {
 		context.JSON(200, repository.GetDockerContainers())
 	})
-	users.GET("/GetDockerContainerDetails", func(context *gin.Context) {
+	users.GET("/container-details", func(context *gin.Context) {
 		id := context.Query("id")
 		context.JSON(200, repository.GetDockerContainerDetails(id))
 	})

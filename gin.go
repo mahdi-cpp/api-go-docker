@@ -14,7 +14,7 @@ var (
 func Run() {
 	router.Use(CORSMiddleware())
 	getRoutes()
-	router.Run(":8080")
+	router.Run(":80127")
 }
 
 // getRoutes will create our api of our entire application

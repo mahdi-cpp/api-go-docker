@@ -21,7 +21,7 @@ func Database() {
 		}})
 
 	if err != nil {
-		println("Failed to connect database sensor.api_v1\"")
+		println("Failed to connect database docker.api_v1\"")
 		os.Exit(1)
 	}
 }
